@@ -40,6 +40,60 @@ body{
       line-height: normal;
 }
 
+/* Burger --------------------------------------------------------------------------------------------------------------- */
+
+.burger {
+    cursor: pointer;
+    z-index: 9999999999;
+    position: fixed;
+    display: none;
+    top: 2em;
+    right: 2em;
+    width: 27px;
+    height: 25px;
+    margin: 50px auto;
+}
+.burger span {
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #FFF;
+      border-radius: 0;
+      left: 0;
+      transition: all .2s;
+}
+
+.navLiMobile{
+        display: block!important;
+}
+
+.b1 {
+    top: 0px;
+    border-radius: 50px;
+}
+.b2 {
+    display: block;
+    top: 9px;
+    border-radius: 50px;
+}
+.b3 {
+    top: 18px;
+    border-radius: 50px;
+}
+
+.b1-anim {
+    top: 8px;
+    transform: rotate(45deg);
+}
+.b2-anim {
+    display: none;
+    left: -60px;
+}
+.b3-anim {
+    top: 8px;
+    transform: rotate(-45deg);
+}
+
 /* Header --------------------------------------------------------------------------------------------------------------- */
 
 #header {
@@ -48,11 +102,11 @@ body{
 
 .row0 {
       position: fixed;
-      z-index: 999999;
+      z-index: 1;
 }
 
 .row1 {
-      z-index: 999999;
+      z-index: 1;
       top: 50px;
       position: fixed;
 }
@@ -62,6 +116,7 @@ body{
 }
 
 #header #logo h1 {
+      z-index: -1;
       margin: 0;
       padding: 0;
       font-size: 22px;
@@ -1124,6 +1179,21 @@ table a, #comments a {
             max-width: 90%;
    }
    #topbar {}
+   .burger{
+           display: block;
+   }
+   #mainav li{
+       display: block;
+   }
+   #mainav{
+       display: none;
+       position: fixed;
+       height: 80%;
+       width: 80%;
+       background: #000;
+       top: 50%;
+       transform: translateY(-50%);
+   }
    #header {
             padding: 30px 0;
    }
@@ -1132,7 +1202,9 @@ table a, #comments a {
    }
    #mainav {}
    #mainav ul {
-            display: none;
+            display: block;
+            right: 0;
+            top: 0;
    }
    #mainav form {
             display: block;
